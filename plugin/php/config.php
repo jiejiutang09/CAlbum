@@ -1,13 +1,13 @@
 <?php
-	define('DB_NAME','test');
+	define('DB_NAME','calbum');
 	//Database Name
 	//(e.g. "demo")
 
-	define('DB_USER','tester');
+	define('DB_USER','calbum');
 	//Database User
 	//(e.g. "root")
 
-	define('DB_PASS','testerpass');
+	define('DB_PASS','calbum');
 	//Database User Password
 	//(e.g. "rootpass")
 

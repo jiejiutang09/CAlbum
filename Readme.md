@@ -13,6 +13,7 @@ Default setting:
 type: mysql<br>
 host: localhost<br>
 port: 3306<br>
+name: clabum<br>
 user: calbum<br>
 pass: calbum
 </p>
