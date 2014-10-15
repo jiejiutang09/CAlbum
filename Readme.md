@@ -13,6 +13,7 @@ Default setting:
 type: mysql<br>
 host: localhost<br>
 port: 3306<br>
+name: clabum<br>
 user: calbum<br>
 pass: calbum
 </p>
@@ -22,3 +23,6 @@ username: root<br>
 password: root
 </p>
 ===
+Note:
+
+1. password hash: password_hash($password,PASSWORD_BCRYPT,['cost'=>12,'salt'=>])
