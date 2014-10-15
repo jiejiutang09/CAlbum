@@ -25,4 +25,4 @@ password: root
 ===
 Note:
 
-1. password hash: password_hash($password,PASSWORD_BCRYPT,['cost'=>12,'salt'=>])
+1. password hash: password_hash($password,PASSWORD_BCRYPT,['cost'=>12,])
