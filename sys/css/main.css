@@ -5,12 +5,10 @@ body
 	margin: 0px auto;
 	padding-top: 70px;
 }
-
 header a:hover
 {
 	text-decoration: none;
 }
-
 .navbar-text
 {
 	font-size: 11pt;
