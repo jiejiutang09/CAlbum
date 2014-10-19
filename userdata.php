@@ -36,11 +36,16 @@
 		</nav>
 		<ol class="breadcrumb">
 			<li><a href="index.php"><?php echo $lang->getString('home')?></a></li>
-			<li class="active"><?php echo $lang->getString('modifydata')?></li>
+			<li class="active"><?php echo $lang->getString('accountsetting')?></li>
 		</ol>
 		<div id="body">
-			<h2><?php echo $userinfo->getUserInfo('username')?></h2>
+			<h2><?php echo $lang->getString('accountsetting')?></h2>
 			<form action="app/p_userdata.php" method="POST" class="form-horizontal">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 control-group">
+						<input type="text" class="form-control" placeholder="<?php echo $userinfo->getUserInfo('username')?>" disabled>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 control-group">
 						<input type="password" name="password" class="form-control" placeholder="<?php echo $lang->getString('password')?>">

@@ -11,8 +11,10 @@
 			$data = $db->get('system','language','sid','1');
 			$lang = $data['language'];
 			$data = $db->get('language','lid','language',$lang);
-			if($data['lid'] != null)
+			if(isset($data['lid']))
 				$this->syslang = $lang;
+			else
+				$this->syslang = 'en';
 
 		}
 		function getString($string)

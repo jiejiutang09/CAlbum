@@ -39,6 +39,7 @@
 			<li class="active"><?php echo $lang->getString('forgetpass')?></li>
 		</ol>
 		<div id="body">
+			<h2><?php echo $lang->getString('forgetpass')?></h2>
 			<form action="app/p_forgetpass.php" method="POST" class="form-horizontal">
 				<div class="row">
 					<div class="col-md-5 col-sm-6 alert alert-info" role="alert"><center><?php echo $lang->getString('forgetemail')?><center></div>

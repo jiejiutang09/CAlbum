@@ -12,6 +12,10 @@
 			</form>
 		<?php endif?>
 		<?php if($userinfo->isLogin()):?>
+			<ul class="nav navbar-nav">
+				<li><a href="systemsetting.php"><?php echo $lang->getString('systemsetting')?></a></li>
+				<li><a href="userdata.php"><?php echo $lang->getString('accountsetting')?></a></li>
+			</ul>
 			<div class="navbar-right">
 				<p class="navbar-text">
 					<?php echo $lang->getString('hi')?><a href="userdata.php" class="navbar-link"> <?php echo $userinfo->getUserInfo('username')?></a>

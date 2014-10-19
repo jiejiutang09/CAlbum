@@ -6,6 +6,10 @@
 	$sysinfo = new SysInfo();
 	$userinfo = new UserInfo();
 	$lang = new Lang();
+	if($userinfo->isLogin()===false)
+	{
+		header('Location: index.php');
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,10 +35,29 @@
 			<?php include('page/nav.php'); ?>
 		</nav>
 		<ol class="breadcrumb">
-			<li class="active"><?php echo $lang->getString('home')?></li>
+			<li><a href="index.php"><?php echo $lang->getString('home')?></a></li>
+			<li class="active"><?php echo $lang->getString('systemsetting')?></li>
 		</ol>
 		<div id="body">
-
+			<h2><?php echo $lang->getString('systemsetting')?></h2>
+			<form action="app/p_systemsetting.php" method="POST" class="form-horizontal">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 control-group">
+						<input type="text" name="title" class="form-control" placeholder="<?php echo $lang->getString('title')?>">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-6 control-group">
+						<input type="text" name="subtitle" class="form-control" placeholder="<?php echo $lang->getString('subtitle')?>">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 col-sm-3 control-group">
+						<input type="text" name="lang" class="form-control" placeholder="<?php echo $lang->getString('lang')?>">
+					</div>
+				</div>
+				<button type="submit" class="btn btn-default"><?php echo $lang->getString('modifydata')?></button>
+			</form>
 		</div>
 		<hr>
 		<div id="footer">
