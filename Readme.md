@@ -3,7 +3,7 @@
 Develop Evironment
 
 Mac OS X with MAMP 3.0.5<br>
-PHP Ver. 5.5.10
+PHP Ver. 5.6.1
 
 ===
 Default setting:
