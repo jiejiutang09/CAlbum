@@ -1,0 +1,21 @@
+body
+{
+	max-width: 1080px;
+	min-width: 800px;
+	margin: 0px auto;
+	padding-top: 70px;
+}
+
+header a:hover
+{
+	text-decoration: none;
+}
+
+.navbar-text
+{
+	font-size: 11pt;
+}
+.navbar-brand
+{
+	font-size:15pt;
+}

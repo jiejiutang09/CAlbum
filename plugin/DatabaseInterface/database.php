@@ -21,7 +21,9 @@
 		}
 		public function getLog()
 		{
-			return $this->log;
+			echo '<pre>';
+			print_r($this->log);
+			echo '</pre>';
 		}
 		public function clearLog()
 		{
@@ -44,7 +46,7 @@
 				$sql = 'SELECT '.$field_name.' FROM '.$table_name.' WHERE '.$condition_field.'=:cv';
 			}
 
-			$sth = $this->dbh->prepare($sql, array(PDO::ATTR_CURSOR=> PDO::CURSOR_FWDONLY));
+			$sth = $this->dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 			$sth->bindParam(':cv',$condition_value);
 			if(!$sth->execute())
 			{
