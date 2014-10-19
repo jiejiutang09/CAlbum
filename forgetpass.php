@@ -6,6 +6,10 @@
 	$sysinfo = new SysInfo();
 	$userinfo = new UserInfo();
 	$lang = new Lang();
+	if($userinfo->isLogin())
+	{
+		header('Location: index.php');
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,6 +34,10 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<?php include('page/nav.php'); ?>
 		</nav>
+		<ol class="breadcrumb">
+			<li><a href="index.php"><?php echo $lang->getString('home')?></a></li>
+			<li class="active"><?php echo $lang->getString('forgetpass')?></li>
+		</ol>
 		<div id="body">
 			<form action="app/p_forgetpass.php" method="POST" class="form-horizontal">
 				<div class="row">

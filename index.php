@@ -30,6 +30,9 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<?php include('page/nav.php'); ?>
 		</nav>
+		<ol class="breadcrumb">
+			<li class="active"><?php echo $lang->getString('home')?></li>
+		</ol>
 		<div id="body">
 
 		</div>

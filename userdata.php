@@ -34,6 +34,10 @@
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<?php include('page/nav.php'); ?>
 		</nav>
+		<ol class="breadcrumb">
+			<li><a href="index.php"><?php echo $lang->getString('home')?></a></li>
+			<li class="active"><?php echo $lang->getString('modifydata')?></li>
+		</ol>
 		<div id="body">
 			<h2><?php echo $userinfo->getUserInfo('username')?></h2>
 			<form action="app/p_userdata.php" method="POST" class="form-horizontal">
@@ -43,7 +47,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 col-sm-6 alert alert-info" role="alert"><?php echo $lang->getString('needtoenterpass')?></div>
+					<div class="col-md-4 col-sm-6 alert alert-info" role="alert"><center><?php echo $lang->getString('needtoenterpass')?></center></div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 control-group">
