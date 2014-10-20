@@ -13,8 +13,22 @@
 		<?php endif?>
 		<?php if($userinfo->isLogin()):?>
 			<ul class="nav navbar-nav">
+				<li><a href="#"></a></li>
 				<li><a href="systemsetting.php"><?php echo $lang->get('systemsetting')?></a></li>
-				<li><a href="userdata.php"><?php echo $lang->get('accountsetting')?></a></li>
+				<li class="dropdown">
+          		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $lang->get('albumsetting');?> <span class="caret"></span></a>
+          			<ul class="dropdown-menu" role="menu">
+          				<li><a href="#"><?php echo $lang->get('newalbum');?></a></li>
+          			  	<?php if(isset($_GET['aid'])):?>
+          			  	<li class="divider"></li>
+          				<li><a href="#"><?php echo $lang->get('editalbum')?></a></li>
+          				<li><a href="#"><?php echo $lang->get('uploadpic');?></a></li>
+          			  	<?php endif?>
+          				<li class="divider"></li>
+          				<li><a href="#"><?php echo $lang->get('delalbum')?></a></li>
+          			</ul>
+        		</li>
+        		<li><a href="userdata.php"><?php echo $lang->get('accountsetting')?></a></li>
 			</ul>
 			<div class="navbar-right">
 				<p class="navbar-text">
