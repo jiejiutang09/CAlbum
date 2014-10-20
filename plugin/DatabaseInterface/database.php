@@ -157,5 +157,31 @@
 			$this->log = array(0=>true, 1=> 'Delete data successfully');
 			return true;
 		}
+
+		public function getOrderBy($table_name, $field_name, $orderby_field, $orderby_value = 'ASC')
+		{
+			if(is_array($field_name))
+			{
+				$sql = 'SELECT ';
+				foreach($field_name as $v)
+					$sql .= $v.',';
+				$sql = substr($sql,0,-1);
+				$sql .= ' FROM '.$table_name.' WHERE 1 ORDER BY '.$orderby_field;
+			}
+			else
+			{
+				$sql = 'SELECT '.$field_name.' FROM '.$table_name.' WHERE 1 ORDER BY '.$orderby_field ;
+			}
+			$sql .= ' '.$orderby_value.' limit 0,1000';
+			$sth = $this->dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+			$sth->bindParam(':cv',$condition_value);
+			if(!$sth->execute())
+			{
+				$this->log = array(0=>false, 1=>'Get Error', 2=>$sth->errorInfo());
+				return false;
+			}
+			$this->log = array(1=>true, 2=>'Get data successfully');
+			return $sth->fetchAll();
+		}
 	}
 ?>

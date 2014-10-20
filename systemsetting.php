@@ -58,6 +58,10 @@
 				</div>
 				<button type="submit" class="btn btn-default"><?php echo $lang->get('modifydata')?></button>
 			</form>
+			<br>
+			<div class="row">
+				<a href="loginerror.php"><button class="btn btn-default"><?php echo $lang->get('loginerror')?></button></a>
+			</div>
 		</div>
 		<hr>
 		<div id="footer">
