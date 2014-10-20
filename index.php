@@ -31,14 +31,14 @@
 			<?php include('page/nav.php'); ?>
 		</nav>
 		<ol class="breadcrumb">
-			<li class="active"><?php echo $lang->getString('home')?></li>
+			<li class="active"><?php echo $lang->get('home')?></li>
 		</ol>
 		<div id="body">
 
 		</div>
 		<hr>
 		<div id="footer">
-			<p><?php echo $lang->getString('footer');?></p>
+			<p><?php echo $lang->get('footer');?></p>
 		</div>
 	</body>
 </html>

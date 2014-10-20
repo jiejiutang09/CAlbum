@@ -35,26 +35,26 @@
 			<?php include('page/nav.php'); ?>
 		</nav>
 		<ol class="breadcrumb">
-			<li><a href="index.php"><?php echo $lang->getString('home')?></a></li>
-			<li class="active"><?php echo $lang->getString('forgetpass')?></li>
+			<li><a href="index.php"><?php echo $lang->get('home')?></a></li>
+			<li class="active"><?php echo $lang->get('forgetpass')?></li>
 		</ol>
 		<div id="body">
-			<h2><?php echo $lang->getString('forgetpass')?></h2>
+			<h2><?php echo $lang->get('forgetpass')?></h2>
 			<form action="app/p_forgetpass.php" method="POST" class="form-horizontal">
 				<div class="row">
-					<div class="col-md-5 col-sm-6 alert alert-info" role="alert"><center><?php echo $lang->getString('forgetemail')?><center></div>
+					<div class="col-md-5 col-sm-6 alert alert-info" role="alert"><center><?php echo $lang->get('forgetemail')?><center></div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 control-group">
-						<input type="text" name="email" class="form-control" placeholder="<?php echo $lang->getString('email')?>">
+						<input type="text" name="email" class="form-control" placeholder="<?php echo $lang->get('email')?>">
 					</div>
 				</div>
-				<button class="btn btn-default" type="submit"><?php echo $lang->getString('submit')?></button>
+				<button class="btn btn-default" type="submit"><?php echo $lang->get('submit')?></button>
 			</form>
 		</div>
 		<hr>
 		<div id="footer">
-			<p><?php echo $lang->getString('footer');?></p>
+			<p><?php echo $lang->get('footer');?></p>
 		</div>
 	</body>
 </html>

@@ -35,11 +35,11 @@
 			<?php include('page/nav.php'); ?>
 		</nav>
 		<ol class="breadcrumb">
-			<li><a href="index.php"><?php echo $lang->getString('home')?></a></li>
-			<li class="active"><?php echo $lang->getString('accountsetting')?></li>
+			<li><a href="index.php"><?php echo $lang->get('home')?></a></li>
+			<li class="active"><?php echo $lang->get('accountsetting')?></li>
 		</ol>
 		<div id="body">
-			<h2><?php echo $lang->getString('accountsetting')?></h2>
+			<h2><?php echo $lang->get('accountsetting')?></h2>
 			<form action="app/p_userdata.php" method="POST" class="form-horizontal">
 				<div class="row">
 					<div class="col-md-4 col-sm-6 control-group">
@@ -48,35 +48,35 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 control-group">
-						<input type="password" name="password" class="form-control" placeholder="<?php echo $lang->getString('password')?>">
+						<input type="password" name="password" class="form-control" placeholder="<?php echo $lang->get('password')?>">
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-4 col-sm-6 alert alert-info" role="alert"><center><?php echo $lang->getString('needtoenterpass')?></center></div>
+					<div class="col-md-4 col-sm-6 alert alert-info" role="alert"><center><?php echo $lang->get('needtoenterpass')?></center></div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 control-group">
-						<input type="password" name="newpassword" class="form-control" placeholder="<?php echo $lang->getString('newpassword')?>">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4 col-sm-6 control-group">
-						<input type="password" name="confirm_newpassword" class="form-control" placeholder="<?php echo $lang->getString('confirm_newpassword')?>">
+						<input type="password" name="newpassword" class="form-control" placeholder="<?php echo $lang->get('newpassword')?>">
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 control-group">
-						<input type="text" name="email" class="form-control" placeholder="<?php echo $lang->getString('email')?>">
+						<input type="password" name="confirm_newpassword" class="form-control" placeholder="<?php echo $lang->get('confirm_newpassword')?>">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-sm-6 control-group">
+						<input type="text" name="email" class="form-control" placeholder="<?php echo $lang->get('email')?>">
 					</div>
 				</div>
 				<br>
 				<input type="hidden" name="username" value="<?php echo $userinfo->getUserInfo('username')?>">
-				<button class="btn btn-default" type="submit"><?php echo $lang->getString('modifydata')?></button>
+				<button class="btn btn-default" type="submit"><?php echo $lang->get('modifydata')?></button>
 			</form>
 		</div>
 		<hr>
 		<div id="footer">
-			<p><?php echo $lang->getString('footer');?></p>
+			<p><?php echo $lang->get('footer');?></p>
 		</div>
 	</body>
 </html>

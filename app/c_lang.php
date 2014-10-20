@@ -17,7 +17,7 @@
 				$this->syslang = 'en';
 
 		}
-		function getString($string)
+		function get($string)
 		{
 			$db = new Database();
 			$data = $db->get('language',$string,'language',$this->syslang);
